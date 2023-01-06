@@ -1,0 +1,62 @@
+$color_1: black;
+$background-color_1: silver;
+$color_2:white;
+
+
+.header {
+	margin-left: 450px;
+	color: $color_1;
+}
+
+.container{
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.mat-header-cell {
+	color: $color_1;
+	
+}
+
+.h3 {
+	margin-bottom: 10px;
+}
+.full-width {
+	width: 90%;
+}
+.filter {
+	margin-left: 700px;
+	margin-bottom: 100px;
+}
+.mat-card-content {
+	color: $color_1;
+	padding-left: 10px;
+}
+table {
+	background-color: $color_2;
+	color: $color_1;
+	width: 100%;
+}
+.tab {
+	border: 100px;
+}
+.mat-cell {
+	color: $color_1;
+}
+tr {
+	&:not(.head) {
+		&:nth-child(odd) {
+			background-color: $background-color_1;
+		}
+	}
+}
+
+
+.spacer{
+	flex: 1 1 auto;
+  }
+
+  .mat-cell,.mat-header-cell {
+	// padding: 10px 10px 10px 100px;
+	padding-left: 90px;
+  }

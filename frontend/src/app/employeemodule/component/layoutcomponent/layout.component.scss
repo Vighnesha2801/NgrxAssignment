@@ -1,0 +1,30 @@
+$background-color_1:rgb(232, 129, 163);
+$background-color_2:aliceblue;
+$color_1:black;
+
+.mat-toolbar{
+    background-color: $background-color_1;
+    color: $color_1;
+    height: auto;
+}
+
+.content{
+  background-color: $background-color_1;
+  // width:fit-content;
+  height:fit-content;
+}
+
+.mat-form-field{
+  margin-left: 100px;
+  
+}
+
+.mat-button{
+    color: $color_1;
+ }
+ 
+ .spacer{
+   flex: 1 1 auto;
+ }
+
+ 
