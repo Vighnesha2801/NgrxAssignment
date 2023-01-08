@@ -11,7 +11,6 @@ export class ListcomponentComponent implements OnInit {
   displayedColumns: any[] = ['id','name','Salary','Address'];
 
   @Input() dataSource:any = '';
-  // @Input() filterString:any='';
 
   constructor(private auth:AuthService) { }
 

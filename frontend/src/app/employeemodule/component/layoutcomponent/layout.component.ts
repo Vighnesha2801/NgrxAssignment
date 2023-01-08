@@ -1,4 +1,5 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { debounceTime, Subject } from 'rxjs';
 // import { Output,  } from '@angular/core';
 // import { EventEmitter } from 'stream';
 
@@ -10,15 +11,18 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 export class LayoutcomponentComponent implements OnInit {
 
   @Output() filterString= new EventEmitter<string>();
+  subject = new Subject<string>();
 
   constructor() { }
 
   ngOnInit(): void {
+    this.subject.pipe(debounceTime(500)).subscribe((res) => this.filterString.emit(res));
   }
 
   searchEmployee(searchString: any){
-    // console.log(searchString.target.value);
-    this.filterString.emit(searchString.target.value);
+    this.subject.next(searchString.target.value);
+
+    // this.filterString.emit(searchString.target.value);
 
   }
 

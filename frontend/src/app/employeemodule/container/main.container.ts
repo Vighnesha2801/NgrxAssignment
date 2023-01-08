@@ -14,12 +14,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 <app-layoutcontainer></app-layoutcontainer>
 <app-listcontainer></app-listcontainer>`
 
-// dataSource="employee$ | async"
-
 })
 export class MaincontainerComponent implements OnInit {
-
-  // employee$ = this.employeeStore.employee$;
 
   constructor() { }
 
@@ -27,7 +23,5 @@ export class MaincontainerComponent implements OnInit {
   }
 
 }
-function rgb(arg0: number, arg1: number, arg2: number): string {
-  throw new Error('Function not implemented.');
-}
+
 

@@ -24,8 +24,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { RouterEffects } from './effect/getEmployee.effect';
 import { ListcomponentComponent } from './component/employeeTablecomponent/employeeTable.component';
 import { LayoutcomponentComponent } from './component/layoutcomponent/layout.component';
-import { FilterPipe } from './pipes/filter.pipe';
-// import { FilterPipe } from '../pipes/filter.pipe';
+
 
 
 @NgModule({
@@ -34,8 +33,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     ListcomponentComponent,
     ListcontainerComponent ,
     LayoutcontainerComponent,
-    MaincontainerComponent,
-    FilterPipe
+    MaincontainerComponent
   ],
   imports: [
     CommonModule,

@@ -1,8 +1,6 @@
 import { createAction, props } from "@ngrx/store";
 import { Employee } from "../models/employee.model";
 
-
-
 export const getEmployeeDetails = createAction(
     '[Employee] Get Employee'
   );

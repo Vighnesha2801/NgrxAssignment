@@ -7,21 +7,27 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { AuthGuard } from './shared/auth.guard';
 
 const routes: Routes = [
-  
+
   {
     path:'',
-    component:LogincontainerComponent
-  },
-  {
-    path:'employee',
-    loadChildren: () => import('./employeemodule/employeemodule.module').then(m => m.EmployeemoduleModule),
-    // component:MaincontainerComponent,
-    canActivate:[AuthGuard]
-  },
-  { 
-    path: '**', 
-    pathMatch: 'full', 
-    component: PagenotfoundComponent 
+    component:AppComponent,
+    children:[
+      {
+        path:'',
+        component:LogincontainerComponent
+      },
+      {
+        path:'employee',
+        loadChildren: () => import('./employeemodule/employeemodule.module').then(m => m.EmployeemoduleModule),
+        canActivate:[AuthGuard]
+      },
+      { 
+        path: '**', 
+        pathMatch: 'full', 
+        component: PagenotfoundComponent 
+      }
+
+    ]
   }
     
 ];

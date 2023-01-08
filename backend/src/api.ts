@@ -13,8 +13,6 @@ var cors=require('cors')
 var employee_object = require('./employee.json');
 console.log(employee_object)
 
-
-
 var port = process.env.PORT || 3000;
 
 
@@ -62,6 +60,20 @@ router.get('/employee',verifyToken,function(req,res){ //here we verify whether t
 
 module.exports =router
 
+/*Understanding implementation of multiple middleware
 
+function display(req,res,next){
+  console.log("In display");
+  next()
+}
+
+function display2(req,res,next){
+  console.log("In display 2");
+  next()
+}
+
+router.get('/hey', display,display2,(req: Request, res: Response) => {
+  res.send(' Hello !! Application works!');
+});*/
 
 

@@ -1,6 +1,6 @@
 import { state } from '@angular/animations';
 import { createReducer,on } from '@ngrx/store';
-import { getEmployeeDetails, getEmployeeSucess } from '../actions/getEmployee.action';
+import {  getEmployeeSucess } from '../actions/getEmployee.action';
 import { Employee } from '../models';
 
 export const employeeFeatureKey = 'employeesState';
